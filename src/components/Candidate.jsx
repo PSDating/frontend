@@ -16,8 +16,8 @@ const Candidate = ({ candidate, updateCandidate }) => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <Icon name='remove' size='big' />
-      <Icon className='checkmark-icon' name='checkmark' size='big' />
+      <Icon className='remove-icon' name='remove' size='huge' onClick={e => updateCandidate(false)} />
+      <Icon className='checkmark-icon' name='checkmark' size='huge' onClick={e => updateCandidate(true)} />
     </Card.Content>
   </Card>
 )
