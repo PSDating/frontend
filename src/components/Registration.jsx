@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Grid, Container, Label, Button, Divider } from "semantic-ui-react";
+import { Redirect } from "react-router-dom";
 
 class Registration extends React.Component {
   constructor(props) {
@@ -40,6 +41,15 @@ class Registration extends React.Component {
   }
 
   render() {
+    if (this.props.user && this.props.user.loggedIn) {
+      return (
+        <Redirect
+          to={{
+            pathname: "/user"
+          }}
+        />
+      );
+    }
     return (
       <Grid
         textAlign='center'

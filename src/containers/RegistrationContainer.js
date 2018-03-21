@@ -3,7 +3,7 @@ import Registration from "../components/Registration.jsx";
 import { login } from "../actions/login";
 
 const mapStateToProps = state => ({
-  
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({
