@@ -1,12 +1,12 @@
 import React from "react";
 import { Grid } from "semantic-ui-react";
-import Candidate from "./Candidate.jsx";
+import CandidateContainer from "../containers/CandidateContainer.js";
 import PreferencesContainer from "../containers/PreferencesContainer.js";
 
 const Selection = () => (
   <Grid centered stackable columns={2}>
     <Grid.Column>
-      <Candidate />
+      <CandidateContainer />
     </Grid.Column>
     <Grid.Column>
       <PreferencesContainer />

@@ -10,7 +10,12 @@ const initialState = {
     message: "initial message",
     preferences: [
         "6202"
-    ]
+    ],
+    candidate: {
+        name: "Company 1",
+        description: "Company description",
+        image: "https://react.semantic-ui.com/assets/images/wireframe/image.png",
+    }
 };
 const store = configureStore(initialState);
 

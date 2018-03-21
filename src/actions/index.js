@@ -20,3 +20,7 @@ export function fetchMessage() {
 export const updatePreference = data => Object.assign({}, {
   type: "UPDATE_PREFERENCE"
 }, data);
+
+export const updateCandidate = data => Object.assign({}, {
+  type: "UPDATE_CANDIDATE"
+}, data);
