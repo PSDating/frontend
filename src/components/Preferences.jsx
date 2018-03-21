@@ -1,30 +1,30 @@
 import React from "react";
-import { Image, Item } from 'semantic-ui-react';
+import { Image, Item, Label, Icon } from 'semantic-ui-react';
 
 const categories = [
   {
     id: "69202",
     label: "Accountant",
-    image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
+    icon: "euro"
   },
   {
     id: "6202",
     label: "IT",
-    image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
+    icon: "desktop"
   },
   {
     id: "7430",
     label: "Translation",
-    image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
+    icon: "talk"
   },
   {
     id: "69101",
     label: "Legal",
-    image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
+    icon: "legal"
   },
 ];
 
-const Preference = ({ id, label, image, selected, updatePreference }) => {
+const Preference = ({ id, label, icon, selected, updatePreference }) => {
   return (
     <Item className={selected ? 'selected' : ''} onClick={e => {
       e.preventDefault();
@@ -33,19 +33,21 @@ const Preference = ({ id, label, image, selected, updatePreference }) => {
         value: !selected
       });
     }}>
-      <Item.Image size='tiny' src={image} />
       <Item.Content>
-        {label}
+        <Label size='huge'>
+          <Icon name={icon} />
+          {label}
+        </Label>
       </Item.Content>
     </Item>
   )
 }
 
-const Preferences = ({preferences, updatePreference}) => {
+const Preferences = ({ preferences, updatePreference }) => {
   return (
     <Item.Group>
       {
-        categories.map(category => <Preference key={category.id} id={category.id} selected={preferences.includes(category.id)} label={category.label} image={category.image} updatePreference={updatePreference} />)
+        categories.map(category => <Preference key={category.id} id={category.id} selected={preferences.includes(category.id)} label={category.label} icon={category.icon} updatePreference={updatePreference} />)
       }
     </Item.Group>
   )
