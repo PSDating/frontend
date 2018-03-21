@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Provider } from "react-redux";
 import { Container, Header, Divider } from "semantic-ui-react";
+import MessageContainer from "../containers/MessageContainer.js";
 import "semantic-ui-css/semantic.min.css";
 import "../../css/psdating.css";
 
@@ -10,6 +11,7 @@ const App = ({ store }) => (
     <Container>
       <Header as="h1">PSDating</Header>
       <Divider />
+      <MessageContainer />
     </Container>
   </Provider>
 );
