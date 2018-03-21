@@ -1,5 +1,5 @@
 {
-  "name": "hangman",
+  "name": "psdating",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.4.1",
@@ -32,6 +33,7 @@
     "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "^7.2.1",
     "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^3.0.7",
     "prettier": "^1.5.3",
     "prettier-eslint": "^6.4.2",
     "prettier-eslint-cli": "^4.1.1",

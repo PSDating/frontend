@@ -1,6 +1,6 @@
 import fetch from "isomorphic-fetch";
 
-const receiveMessage = message => ({
+export const receiveMessage = message => ({
   type: "RECEIVE_MESSAGE",
   message,
 });
@@ -16,3 +16,11 @@ export function fetchMessage() {
       console.error("Error connecting to the server");
     });
 }
+
+export const updatePreference = data => Object.assign({}, {
+  type: "UPDATE_PREFERENCE"
+}, data);
+
+export const updateCandidate = data => Object.assign({}, {
+  type: "UPDATE_CANDIDATE"
+}, data);
