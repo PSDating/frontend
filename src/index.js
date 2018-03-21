@@ -1,8 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import "babel-polyfill";
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import React from "react";
+import { render } from "react-dom";
+import configureStore from "./configureStore";
+import App from "./components/App.jsx";
+
+const store = configureStore();
+
+render(<App store={store} />, document.getElementById("root"));
