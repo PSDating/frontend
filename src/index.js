@@ -12,9 +12,11 @@ const initialState = {
         "6202"
     ],
     candidate: {
-        name: "Company 1",
-        description: "Company description",
-        image: "https://react.semantic-ui.com/assets/images/wireframe/image.png",
+        companyName: "Albert Heijn Rotterdam",
+        logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Albert_Heijn_Logo.svg/2000px-Albert_Heijn_Logo.svg.png",
+        address: "yep",
+        zipCity: "Rotterdam",
+        phonenumber: "010-1234567"
     },
     categories: [
         {

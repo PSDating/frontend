@@ -5,3 +5,7 @@
 .item.selected {
     opacity: 1;
 }
+
+.checkmark-icon {
+    float: right;
+}
