@@ -1,9 +1,5 @@
-const user = (state = null, action) => {
-  if (action.type === "LOGIN_SUCCESSFUL") {
-    return action.user;
-  }
-
+const candidate = (state = null, action) => {
   return state;
 };
 
-export default user;
+export default candidate;
