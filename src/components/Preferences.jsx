@@ -3,20 +3,25 @@ import { Image, Item } from 'semantic-ui-react';
 
 const categories = [
   {
-    id: "1",
-    label: "cat1",
+    id: "69202",
+    label: "Accountant",
     image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
   },
   {
-    id: "2",
-    label: "cat2",
+    id: "6202",
+    label: "IT",
     image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
   },
   {
-    id: "3",
-    label: "cat3",
+    id: "7430",
+    label: "Translation",
     image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
-  }
+  },
+  {
+    id: "69101",
+    label: "Legal",
+    image: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
+  },
 ];
 
 const Preference = ({ id, label, image, selected, updatePreference }) => {

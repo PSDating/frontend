@@ -9,7 +9,7 @@ const initialState = {
     user: null,
     message: "initial message",
     preferences: [
-        "2"
+        "6202"
     ]
 };
 const store = configureStore(initialState);
