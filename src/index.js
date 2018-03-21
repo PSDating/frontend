@@ -18,6 +18,13 @@ const initialState = {
         zipCity: "Rotterdam",
         phonenumber: "010-1234567"
     },
+    candidates: [{
+        "companyName": "Praxis Rotterdam",
+        "logoUrl": "http://defabriek.nl/_wpx/wp-content/uploads/2013/08/Praxis-logo.jpg",
+        "address": "yep",
+        "zipCity": "Rotterdam",
+        "phonenumber": "010-1234567"
+    }],
     categories: [
         {
             id: "69202",
