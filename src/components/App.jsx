@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 
+import ProtectedRoute from "./ProtectedRoute.jsx"
 import MessageContainer from "../containers/MessageContainer.js";
 import MatchesContainer from "../containers/MatchesContainer.js";
 import UserContainer from "../containers/UserContainer.js";
@@ -22,13 +23,11 @@ const App = ({ store }) => (
       <Container>
         <Header as="h1">PSDating</Header>
         <Menu>
-          <Menu.Item as={Link} to="/message">Message</Menu.Item>
           <Menu.Item as={Link} to="/matches">Matches</Menu.Item>
           <Menu.Item as={Link} to="/user">User</Menu.Item>
           <Menu.Item as={Link} to="/selection">Selection</Menu.Item>
           <Menu.Item as={Link} to="/register">Register</Menu.Item>
         </Menu>
-        <Route path="/message" component={MessageContainer} />
         <Route path="/matches" component={MatchesContainer} />
         <Route path="/user" component={UserContainer} />
         <Route path="/selection" component={Selection} />
