@@ -15,7 +15,29 @@ const initialState = {
         name: "Company 1",
         description: "Company description",
         image: "https://react.semantic-ui.com/assets/images/wireframe/image.png",
-    }
+    },
+    categories: [
+        {
+            id: "69202",
+            label: "Accountant",
+            icon: "euro"
+        },
+        {
+            id: "6202",
+            label: "IT",
+            icon: "desktop"
+        },
+        {
+            id: "7430",
+            label: "Translation",
+            icon: "talk"
+        },
+        {
+            id: "69101",
+            label: "Legal",
+            icon: "legal"
+        },
+    ]
 };
 const store = configureStore(initialState);
 

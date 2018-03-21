@@ -1,29 +1,6 @@
 import React from "react";
 import { Image, Item, Label, Icon } from 'semantic-ui-react';
 
-const categories = [
-  {
-    id: "69202",
-    label: "Accountant",
-    icon: "euro"
-  },
-  {
-    id: "6202",
-    label: "IT",
-    icon: "desktop"
-  },
-  {
-    id: "7430",
-    label: "Translation",
-    icon: "talk"
-  },
-  {
-    id: "69101",
-    label: "Legal",
-    icon: "legal"
-  },
-];
-
 const Preference = ({ id, label, icon, selected, updatePreference }) => {
   return (
     <Item className={selected ? 'selected' : ''} onClick={e => {
@@ -43,7 +20,7 @@ const Preference = ({ id, label, icon, selected, updatePreference }) => {
   )
 }
 
-const Preferences = ({ preferences, updatePreference }) => {
+const Preferences = ({ preferences, updatePreference, categories }) => {
   return (
     <Item.Group>
       {
