@@ -5,7 +5,11 @@ import { render } from "react-dom";
 import configureStore from "./configureStore";
 import App from "./components/App.jsx";
 
-const store = configureStore();
+const initialState = {
+    user: null,
+    message: "initial message"
+};
+const store = configureStore(initialState);
 
 const root = document.createElement("div");
 root.setAttribute("id", "root");
