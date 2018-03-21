@@ -7,4 +7,7 @@ import App from "./components/App.jsx";
 
 const store = configureStore();
 
+const root = document.createElement("div");
+root.setAttribute("id", "root");
+document.body.appendChild(root);
 render(<App store={store} />, document.getElementById("root"));
