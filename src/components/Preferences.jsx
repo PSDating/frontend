@@ -21,7 +21,7 @@ const categories = [
 
 const Preference = ({ id, label, image, selected, updatePreference }) => {
   return (
-    <Item onClick={e => {
+    <Item className={selected ? 'selected' : ''} onClick={e => {
       e.preventDefault();
       updatePreference({
         id,

@@ -7,7 +7,10 @@ import App from "./components/App.jsx";
 
 const initialState = {
     user: null,
-    message: "initial message"
+    message: "initial message",
+    preferences: [
+        "2"
+    ]
 };
 const store = configureStore(initialState);
 

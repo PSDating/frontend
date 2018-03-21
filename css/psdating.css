@@ -1,0 +1,7 @@
+.item {
+    opacity: 0.5;
+}
+
+.item.selected {
+    opacity: 1;
+}
