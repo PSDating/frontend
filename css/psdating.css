@@ -1,3 +1,24 @@
+body {
+    font-size: 16px !important;
+}
+
+input {
+    font-size: 16px !important;
+}
+
+label {
+    font-size: 16px !important;
+}
+
+button {
+    font-size: 18px !important;
+}
+
+h3 {
+    font-size: 24px !important;
+    text-align: center;
+}
+
 #root {
     width: 100%;
     height: 100%;
@@ -33,7 +54,7 @@
 }
 
 .full-width {
-    width: 367px;
+    width: 363px;
     padding-right: 20px;
     margin-bottom: 12px;
 }
@@ -73,7 +94,8 @@
 }
 
 .register-button {
-    padding-top: 18px !important;
+    font-size: 18px !important;
+    padding-top: 16px !important;
 }
 
 .logo-intro {
@@ -92,25 +114,25 @@
 }
 
 .button-register-register {
-    margin-top: 164px !important;
+    margin-top: 146px !important;
 }
 
 .bank-selector-container {
     padding-bottom: 12px !important;
-    padding-left: 12px !important;
+    padding-left: 8px !important;
 }
 
 .bank-dropdown {
-    margin-left: 8px !important;
-    width: 307px !important;
+    margin-left: 3px !important;
+    width: 309px !important;
 }
 
 .bank-register-button {
-    margin-top: 202px !important;
+    margin-top: 187px !important;
 }
 
 .bank-scanner-button {
-    margin-top: 279px !important;
+    margin-top: 273px !important;
 }
 
 .shadow-rabobank-image {
