@@ -124,7 +124,7 @@ h3 {
 
 .bank-dropdown {
     margin-left: 3px !important;
-    width: 309px !important;
+    width: 100% !important;
 }
 
 .bank-register-button {

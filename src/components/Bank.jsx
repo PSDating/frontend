@@ -23,6 +23,8 @@ class Bank extends React.Component {
         this.updateBank = this.updateBank.bind(this)
         this.updateBankNumber = this.updateBankNumber.bind(this)
         this.updateCardNumber = this.updateCardNumber.bind(this)
+
+        this.authorizeAccount = this.authorizeAccount.bind(this);
     }
 
     updateBank(event, data) {
@@ -37,6 +39,12 @@ class Bank extends React.Component {
         this.setState({ bankCardNumber: event.target.value })
     }
 
+    authorizeAccount(event) {
+        console.log(this.state);
+        this.props.authorizeAccount(this.state);
+        event.preventDefault();
+    }
+
     render() {
         if (this.props.bank) {
             return (
@@ -48,20 +56,26 @@ class Bank extends React.Component {
         }
         return <div>
             <img className="logo-intro logo-register logo-bank" src={logoImage} />
-            <Grid>
-                <Grid.Row>
-                    <Grid.Column width={16}>
-                        <div className="bank-selector-container">
-                            <Icon name="building" />
-                            <Dropdown className="bank-dropdown" iconPosition="left" placeholder='Choose your bank...' value={this.state.bankName} onChange={this.updateBank} search selection options={[{ key: 'RB', value: 'RABO', text: 'Rabobank' }]} />
+            <Grid
+                style={{ height: '100%' }}
+                textAlign='center'
+            >
+                <Grid.Column style={{ maxWidth: 650 }}>
+                    <form className="ui form" onSubmit={this.handleSubmit}>
+                        <div className="field">
+                            <Dropdown placeholder='Choose your bank...' value={this.state.bankName} onChange={this.updateBank} search selection options={[{ key: 'RB', value: 'RABO', text: 'Rabobank' }]} />
                         </div>
-                        <Input className="full-width" icon="credit card" iconPosition="left" value={this.state.bankAccountNumber} onChange={this.updateBankNumber} placeholder='Banknumber' />
-                        <Input className="full-width" icon="credit card outline" iconPosition="left" value={this.state.bankCardNumber} onChange={this.updateCardNumber} placeholder='Cardnumber' />
-                    </Grid.Column>
-                </Grid.Row>
+                        <div className="field">
+                            <Input icon="credit card" iconPosition="left" value={this.state.bankAccountNumber} onChange={this.updateBankNumber} placeholder='Banknumber' />
+                        </div>
+                        <div className="field">
+                            <Input icon="id card outline" iconPosition="left" value={this.state.bankCardNumber} onChange={this.updateCardNumber} placeholder='Cardnumber' />
+                        </div>
+                        <Button className="fs-button bank-register-button" color='red' onClick={this.authorizeAccount}>Authenticate</Button>
+                    </form>
+                </Grid.Column>`
             </Grid>
             <img className={this.state.bankName == 'RABO' ? 'shadow-rabobank-image' : 'hidden'} src={rabobankCodeImage} />
-            <Button className="fs-button bank-register-button" color='red' onClick={(e) => { console.log(this.state); this.props.authorizeAccount(this.state) }}>Authenticate</Button>
         </div>
     }
 }
