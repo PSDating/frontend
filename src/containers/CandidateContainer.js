@@ -3,7 +3,7 @@ import Candidate from "../components/Candidate.jsx";
 import { updateCandidate } from "../actions";
 
 const mapStateToProps = state => ({
-  candidate: state.candidate
+  candidates: state.candidates
 });
 
 const mapDispatchToProps = dispatch => ({
