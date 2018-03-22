@@ -13,21 +13,21 @@ import MessageContainer from "../containers/MessageContainer.js";
 import MatchesContainer from "../containers/MatchesContainer.js";
 import IntroContainer from "../containers/IntroContainer.js";
 import BankContainer from "../containers/BankContainer.js";
-import Selection from "../components/Selection.jsx";
 import RegistrationContainer from "../containers/RegistrationContainer.js";
 import ScannerContainer from "../containers/ScannerContainer.js";
+import CandidateContainer from "../containers/CandidateContainer.js";
 import "semantic-ui-css/semantic.min.css";
 import "../../css/psdating.css";
 
 const App = ({ store }) => (
   <Provider store={store}>
     <Router>
-      <Container>
+      <Container className="main-container">
         <Route exact path="/" component={IntroContainer} />
         <Route path="/register" component={RegistrationContainer} />
         <Route path="/bank" component={BankContainer} />
         <Route path="/scanner" component={ScannerContainer} />
-        <Route path="/selection" component={Selection} />
+        <Route path="/selection" component={CandidateContainer} />
       </Container>
     </Router>
   </Provider>
