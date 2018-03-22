@@ -17,3 +17,7 @@
     padding-right: 20px;
 }
 
+.candidate-column {
+    display: flex;
+    justify-content: center;
+}
