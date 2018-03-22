@@ -23,15 +23,15 @@ const App = ({ store }) => (
       <Container>
         <Header as="h1">PSDating</Header>
         <Menu>
-          <Menu.Item as={Link} to="/matches">Matches</Menu.Item>
-          <Menu.Item as={Link} to="/selection">Selection</Menu.Item>
           <Menu.Item as={Link} to="/register">Register</Menu.Item>
           <Menu.Item as={Link} to="/scanner">Scanner</Menu.Item>
+          <Menu.Item as={Link} to="/selection">Selection</Menu.Item>
+          <Menu.Item as={Link} to="/matches">Matches</Menu.Item>
         </Menu>
+        <Route path="/scanner" component={ScannerContainer} />
+        <Route path="/register" component={RegistrationContainer} />
         <Route path="/matches" component={MatchesContainer} />
         <Route path="/selection" component={Selection} />
-        <Route path="/register" component={RegistrationContainer} />
-        <Route path="/scanner" component={ScannerContainer} />
       </Container>
     </Router>
   </Provider>
