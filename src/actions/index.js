@@ -25,16 +25,24 @@ export const updateCandidate = data => Object.assign({}, {
   type: "UPDATE_CANDIDATE"
 }, data);
 
-<<<<<<< HEAD
 export function authorizeAccount(data) {
-  return dispatch =>
-    dispatch(authorizeAccountAction(data))
+  return dispatch => {
+    console.log(data)
+    fetch("http://35.205.253.173:8080/account", { method: 'post', body: JSON.stringify(data) })
+    .then(response => response.text())
+    .then(text => {
+      dispatch(authorizeAccountAction(data))
+    })
+    .catch(() => {
+      console.error("Error connecting to the server");
+    });
+  }
 }
 
 export const authorizeAccountAction = data => Object.assign({}, {
   type: "AUTHORIZE_ACCOUNT"
 }, data);
-=======
+
 export const scannerAuthorize = () => ({
   type: "SCANNER_AUTHORIZE"
 });
@@ -55,4 +63,3 @@ export const receiveRecommendations = recommendations => ({
   type: "RECEIVE_RECOMMENDATIONS",
   recommendations,
 });
->>>>>>> 5f7534d8d52ec2ad28c65202b5a93d0448ea6fe9

@@ -5,8 +5,10 @@ import { authorizeAccount, authorizeAccountAction } from "../actions/index";
 const mapStateToProps = state => (state);
 
 const mapDispatchToProps = dispatch => ({
-    authorizeAccount: data => authorizeAccount(data),
-  });
+    authorizeAccount: (data) => {
+        dispatch(authorizeAccount(data))
+    }
+})
 
 const BankContainer = connect(mapStateToProps, mapDispatchToProps)(Bank);
 
