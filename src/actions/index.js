@@ -35,7 +35,9 @@ export function authorizeAccount(data) {
         'Content-Type': 'application/json'
       }, 
       body: JSON.stringify(data) })
-    .then(text => {
+    .then(response => response.json())
+    .then(json => {
+      dispatch(scannerImage(json.challengeUrl));
       dispatch(authorizeAccountAction(data))
     })
     .catch(() => {
@@ -47,6 +49,11 @@ export function authorizeAccount(data) {
 export const authorizeAccountAction = data => Object.assign({}, {
   type: "AUTHORIZE_ACCOUNT"
 }, data);
+
+export const scannerImage = url => ({
+  type: "SCANNER_IMAGE",
+  image: `http://35.205.253.173:8080/${url}`
+});
 
 export const scannerAuthorize = () => ({
   type: "SCANNER_AUTHORIZE"
