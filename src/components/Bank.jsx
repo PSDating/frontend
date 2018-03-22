@@ -15,7 +15,7 @@ class Bank extends React.Component {
 
         this.state = {
             bankName: "",
-            banknumber: "",
+            bankAccountNumber: "",
             bankCardNumber: ""
         };
 
@@ -29,7 +29,7 @@ class Bank extends React.Component {
     }
 
     updateBankNumber(event) {
-        this.setState({banknumber: event.target.value})
+        this.setState({bankAccountNumber: event.target.value})
     }
 
     updateCardNumber(event) {
@@ -49,12 +49,12 @@ class Bank extends React.Component {
       <Grid>
         <Grid.Row>
             <Grid.Column width={16}>
-                <Dropdown placeholder='Choose your bank...' value={ this.state.bankName } onChange={ this.updateBank } search selection options={[{key: 'RB', value: 'Rabobank', text: 'Rabobank'}]} />
+                <Dropdown placeholder='Choose your bank...' value={ this.state.bankName } onChange={ this.updateBank } search selection options={[{key: 'RB', value: 'RABO', text: 'Rabobank'}]} />
             </Grid.Column>
         </Grid.Row>
         <Grid.Row>
             <Grid.Column width={10}>
-                <Input className="full-width" value={ this.state.banknumber } onChange={ this.updateBankNumber } placeholder='Banknumber' />
+                <Input className="full-width" value={ this.state.bankAccountNumber } onChange={ this.updateBankNumber } placeholder='Banknumber' />
             </Grid.Column>
             <Grid.Column width={6}>
                 <Input className="full-width" value={ this.state.bankCardNumber } onChange={ this.updateCardNumber } placeholder='Cardnumber' />
