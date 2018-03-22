@@ -8,7 +8,7 @@ const Candidate = ({ candidates, updateCandidate }) => {
 
   const candidate = candidates[0];
   return (
-    <Card>
+    <Card className="candidate-card">
       <Image className="candidate-image" src={candidate.logoUrl} />
       <Card.Content>
         <Card.Header>
