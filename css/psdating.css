@@ -51,3 +51,29 @@
     width: 100px;
     height: 100px;
 }
+
+.intro-header {
+    height: 518px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro-header h2 {
+    font-weight: bold;
+}
+
+.intro-container {
+    height: 100%;
+}
+
+.register-button {
+    padding-top: 18px !important;
+    margin-bottom: 20px !important;
+}
+
+.logo-intro {
+    width: 300px;
+    padding-bottom: 10px;
+}
