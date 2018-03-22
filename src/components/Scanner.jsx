@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Header, Input, Button, Image, Label } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
+import logoImage from "../../img/logo.png";
 
 const Scanner = ({image, authorized, candidates, requestScannerAuthorize, requestRecommendations}) => {
   const shouldToGoSelection = authorized && candidates.length !== 0;
@@ -15,17 +16,18 @@ const Scanner = ({image, authorized, candidates, requestScannerAuthorize, reques
   }
 
   return (
-    <Container>
-      <Header as="h2">Scan</Header>
-      <Image className="scanner-image" src={image}></Image>
-      <Label>Enter password</Label>
-      <Input placeholder='Search...' type="password" />
-      <Button onClick={e => {
+    <div>
+      <img className="logo-intro logo-bank" src={logoImage} />
+      <Image className="shadow-rabobank-image" src={image}></Image>
+      <div className="rabobank-code-input">
+      <Input className="full-width" icon="hashtag" iconPosition="left" placeholder='Password' type="password" />
+      </div>
+      <Button className="fs-button bank-scanner-button" color='red' onClick={e => {
         e.preventDefault();
         requestScannerAuthorize();
         requestRecommendations();
       }}>Authorize</Button>
-    </Container>
+    </div>
   )
 }
 

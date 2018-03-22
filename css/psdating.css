@@ -92,7 +92,7 @@
 }
 
 .button-register-register {
-    margin-top: 148px !important;
+    margin-top: 164px !important;
 }
 
 .bank-selector-container {
@@ -109,14 +109,22 @@
     margin-top: 202px !important;
 }
 
+.bank-scanner-button {
+    margin-top: 279px !important;
+}
+
 .shadow-rabobank-image {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    left: 107px;
-    bottom: 92px;
+    position: absolute !important;
+    width: 160px !important;
+    height: 160px !important;
+    left: 107px !important;
+    bottom: 92px !important;
 }
 
 .hidden {
     display: none;
+}
+
+.rabobank-code-input {
+    margin-top: 80px !important;
 }
