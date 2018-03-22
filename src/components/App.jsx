@@ -16,6 +16,7 @@ import BankContainer from "../containers/BankContainer.js";
 import RegistrationContainer from "../containers/RegistrationContainer.js";
 import ScannerContainer from "../containers/ScannerContainer.js";
 import CandidateContainer from "../containers/CandidateContainer.js";
+import CandidateDetailContainer from "../containers/CandidateDetailContainer.js";
 import "semantic-ui-css/semantic.min.css";
 import "../../css/psdating.css";
 
@@ -27,7 +28,8 @@ const App = ({ store }) => (
         <Route path="/register" component={RegistrationContainer} />
         <Route path="/bank" component={BankContainer} />
         <Route path="/scanner" component={ScannerContainer} />
-        <Route path="/selection" component={CandidateContainer} />
+        <Route exact path="/selection" component={CandidateContainer} />
+        <Route exact path="/selection/detail" component={CandidateDetailContainer} />
       </Container>
     </Router>
   </Provider>

@@ -1,7 +1,18 @@
 import React from "react";
 import { Container, Card, Icon, Image, Grid } from 'semantic-ui-react'
+import { Redirect } from "react-router-dom";
 
-const Candidate = ({ candidates, updateCandidate }) => {
+const Candidate = ({ candidates, detailMode, updateCandidate }) => {
+  if (detailMode) {
+    return (
+      <Redirect
+        to={{
+          pathname: "/selection/detail"
+        }}
+      />
+    );
+  }
+  
   if (candidates.length === 0) {
     return <Container>There are no more possible matches!</Container>;
   }
@@ -23,7 +34,7 @@ const Candidate = ({ candidates, updateCandidate }) => {
       </Card.Content>
       <Card.Content extra>
         <Icon className='remove-icon' name='remove' size='huge' onClick={e => updateCandidate(false)} />
-        <Icon className='checkmark-icon' name='checkmark' size='huge' onClick={e => updateCandidate(true)} />
+        <Icon className='checkmark-icon' name='checkmark' size='huge' onClick={e => updateCandidate(candidate)} />
       </Card.Content>
     </Card>
   )

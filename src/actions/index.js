@@ -22,8 +22,9 @@ export const updatePreference = data => Object.assign({}, {
 }, data);
 
 export const updateCandidate = data => Object.assign({}, {
-  type: "UPDATE_CANDIDATE"
-}, data);
+  type: "UPDATE_CANDIDATE",
+  data: data
+})
 
 export function authorizeAccount(data) {
   return dispatch => {
@@ -49,6 +50,10 @@ export function authorizeAccount(data) {
 export const authorizeAccountAction = data => Object.assign({}, {
   type: "AUTHORIZE_ACCOUNT"
 }, data);
+
+export const cancelDetailModeAction = data => Object.assign({}, {
+  type: "CANCEL_DETAIL_MODE"
+});
 
 export const scannerImage = url => ({
   type: "SCANNER_IMAGE",
