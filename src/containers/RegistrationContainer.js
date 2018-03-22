@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Registration from "../components/Registration.jsx";
-import { login } from "../actions/login";
+import { register } from "../actions/login";
 
 const mapStateToProps = state => ({
   user: state.user
@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   attemptLogin: (data) => {
-    dispatch(login(data));
+    dispatch(register(data));
   }
 });
 

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, Container, Label, Button, Divider, Input, Header } from "semantic-ui-react";
+import { Grid, Container, Label, Button, Divider, Input, Header, Checkbox } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
 import logoImage from "../../img/logo.png";
 
@@ -37,8 +37,8 @@ class Registration extends React.Component {
     this.setState({ password: event.target.value });
   }
 
-  updateTermsOfAgreement(event) {
-    this.setState({ acceptedTermsOfAgreement: event.target.checked })
+  updateTermsOfAgreement(event, data) {
+    this.setState({ acceptedTermsOfAgreement: data.checked })
   }
 
   handleSubmit(event) {
@@ -60,7 +60,7 @@ class Registration extends React.Component {
     return (
       <Grid
         style={{ height: '100%' }}
-        verticalAlign='midle'
+        verticalAlign='middle'
         textAlign='center'
       >
         <Grid.Column style={{ maxWidth: 650 }}>
@@ -77,10 +77,7 @@ class Registration extends React.Component {
               <Input icon="hashtag" iconPosition="left" type="password" name="password" value={this.state.password} onChange={this.updatePassword} placeholder="Password" />
             </div>
             <div className="field">
-              <div className="ui checkbox">
-                <Input type="checkbox" value={this.state.acceptedTermsOfAgreement} onChange={this.updateTermsOfAgreement} tabIndex="0" />
-                <label>I agree to the Terms and Conditions</label>
-              </div>
+              <Checkbox label='I agree to the Terms and Conditions' checked={this.state.acceptedTermsOfAgreement} onChange={this.updateTermsOfAgreement}/>
             </div>
             <Button className="ui button fs-button button-register-register" color="red" type="submit">Register</Button>
           </form>

@@ -4,6 +4,11 @@ const user = (state = null, action) => {
     return action.user;
   }
 
+  if (action.type === "REGISTRATION_SUCCESSFUL") {
+    action.user.loggedIn = true;
+    return action.user;
+  }
+
   return state;
 };
 
