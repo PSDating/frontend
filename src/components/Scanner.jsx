@@ -2,8 +2,8 @@ import React from "react";
 import { Container, Header, Input, Button, Image, Label } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
 
-const Scanner = ({image, authorized, requestScannerAuthorize}) => {
-  const shouldToGoSelection = authorized;
+const Scanner = ({image, authorized, candidates, requestScannerAuthorize, requestRecommendations}) => {
+  const shouldToGoSelection = authorized && candidates.length !== 0;
   if (shouldToGoSelection) {
     return (
       <Redirect
@@ -23,6 +23,7 @@ const Scanner = ({image, authorized, requestScannerAuthorize}) => {
       <Button onClick={e => {
         e.preventDefault();
         requestScannerAuthorize();
+        requestRecommendations();
       }}>Authorize</Button>
     </Container>
   )
