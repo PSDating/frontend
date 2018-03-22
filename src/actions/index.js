@@ -24,3 +24,12 @@ export const updatePreference = data => Object.assign({}, {
 export const updateCandidate = data => Object.assign({}, {
   type: "UPDATE_CANDIDATE"
 }, data);
+
+export function authorizeAccount(data) {
+  return dispatch =>
+    dispatch(authorizeAccountAction(data))
+}
+
+export const authorizeAccountAction = data => Object.assign({}, {
+  type: "AUTHORIZE_ACCOUNT"
+}, data);

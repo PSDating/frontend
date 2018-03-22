@@ -4,6 +4,7 @@ import message from "./message.js";
 import preferences from "./preferences.js";
 import candidates from "./candidates.js";
 import categories from "./categories.js";
+import bank from "./bank.js";
 import matches from "./matches.js";
 import scanner from "./scanner.js";
 
@@ -14,7 +15,8 @@ const PSDating = combineReducers({
   candidates,
   categories,
   matches,
-  scanner
+  scanner,
+  bank
 });
 
 export default PSDating;

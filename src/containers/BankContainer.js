@@ -1,8 +1,13 @@
 import { connect } from "react-redux";
 import Bank from "../components/Bank.jsx";
+import { authorizeAccount, authorizeAccountAction } from "../actions/index";
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => (state);
 
-const BankContainer = connect(mapStateToProps)(Bank);
+const mapDispatchToProps = dispatch => ({
+    authorizeAccount: data => authorizeAccount(data),
+  });
+
+const BankContainer = connect(mapStateToProps, mapDispatchToProps)(Bank);
 
 export default BankContainer;

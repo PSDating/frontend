@@ -4,10 +4,19 @@ import { Container, Button, Grid, Input, Dropdown } from "semantic-ui-react";
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Redirect
   } from "react-router-dom";
 
-const Bank = () => {
+const Bank = (props) => {
+    if (props.bank) {
+        return (
+            <Redirect
+            to={{
+                pathname: "/scanner"
+            }}/>
+        );
+    }
   return <Container>
       <Grid>
         <Grid.Row>
@@ -25,7 +34,7 @@ const Bank = () => {
         </Grid.Row>
         <Grid.Row>
             <Grid.Column width={16}>
-            <Button className="fs-button" color='green'>Authenticate</Button>
+                <Button className="fs-button" color='green' onClick={(e) => { e.preventDefault(); props.authorizeAccount({})}}>Authenticate</Button>
             </Grid.Column>
         </Grid.Row>
       </Grid>

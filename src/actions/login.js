@@ -1,4 +1,5 @@
 import fetch from "isomorphic-fetch";
+import { authorizeAccountAction } from "../actions";
 
 const loginSuccessful = user => ({
     type: "LOGIN_SUCCESSFUL",
