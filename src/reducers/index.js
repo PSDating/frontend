@@ -5,6 +5,7 @@ import preferences from "./preferences.js";
 import candidates from "./candidates.js";
 import categories from "./categories.js";
 import matches from "./matches.js";
+import scanner from "./scanner.js";
 
 const PSDating = combineReducers({
   user,
@@ -12,7 +13,8 @@ const PSDating = combineReducers({
   preferences,
   candidates,
   categories,
-  matches
+  matches,
+  scanner
 });
 
 export default PSDating;

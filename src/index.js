@@ -81,7 +81,8 @@ const initialState = {
                 phonenumber: "010-1234567"
             }
         ]
-    }
+    },
+    scanner: "https://react.semantic-ui.com/assets/images/wireframe/image.png"
 };
 const store = configureStore(initialState);
 

@@ -14,6 +14,7 @@ import MatchesContainer from "../containers/MatchesContainer.js";
 import UserContainer from "../containers/UserContainer.js";
 import Selection from "../components/Selection.jsx";
 import RegistrationContainer from "../containers/RegistrationContainer.js";
+import ScannerContainer from "../containers/ScannerContainer.js";
 import "semantic-ui-css/semantic.min.css";
 import "../../css/psdating.css";
 
@@ -27,11 +28,13 @@ const App = ({ store }) => (
           <Menu.Item as={Link} to="/user">User</Menu.Item>
           <Menu.Item as={Link} to="/selection">Selection</Menu.Item>
           <Menu.Item as={Link} to="/register">Register</Menu.Item>
+          <Menu.Item as={Link} to="/scanner">Scanner</Menu.Item>
         </Menu>
         <Route path="/matches" component={MatchesContainer} />
         <Route path="/user" component={UserContainer} />
         <Route path="/selection" component={Selection} />
         <Route path="/register" component={RegistrationContainer} />
+        <Route path="/scanner" component={ScannerContainer} />
       </Container>
     </Router>
   </Provider>
