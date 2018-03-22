@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, Container, Label, Button, Divider } from "semantic-ui-react";
+import { Grid, Container, Label, Button, Divider, Input, Header } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
+import logoImage from "../../img/logo.png";
 
 class Registration extends React.Component {
   constructor(props) {
@@ -58,31 +59,30 @@ class Registration extends React.Component {
     }
     return (
       <Grid
-        textAlign='center'
         style={{ height: '100%' }}
-        verticalAlign='middle'
+        verticalAlign='midle'
+        textAlign='center'
       >
         <Grid.Column style={{ maxWidth: 650 }}>
+          <img className="logo-intro logo-register" src={logoImage} />
+
           <form className="ui form" onSubmit={this.handleSubmit}>
             <div className="field">
-              <label>Company Name</label>
-              <input type="text" name="company-name" value={this.state.company} onChange={this.updateCompany} placeholder="Company Name" />
+              <Input type="text" icon="briefcase" iconPosition="left" name="company-name" value={this.state.company} onChange={this.updateCompany} placeholder="Company Name" />
             </div>
             <div className="field">
-              <label>Username</label>
-              <input type="text" name="user-name" value={this.state.username} onChange={this.updateUsername} placeholder="Username" />
+              <Input type="text" icon="user" iconPosition="left" name="user-name" value={this.state.username} onChange={this.updateUsername} placeholder="Username" />
             </div>
             <div className="field">
-              <label>Password</label>
-              <input type="password" name="password" value={this.state.password} onChange={this.updatePassword} placeholder="Password" />
+              <Input icon="hashtag" iconPosition="left" type="password" name="password" value={this.state.password} onChange={this.updatePassword} placeholder="Password" />
             </div>
             <div className="field">
               <div className="ui checkbox">
-                <input type="checkbox" value={this.state.acceptedTermsOfAgreement} onChange={this.updateTermsOfAgreement} tabIndex="0" />
+                <Input type="checkbox" value={this.state.acceptedTermsOfAgreement} onChange={this.updateTermsOfAgreement} tabIndex="0" />
                 <label>I agree to the Terms and Conditions</label>
               </div>
             </div>
-            <button className="ui button" type="submit">Register</button>
+            <Button className="ui button fs-button button-register-register" color="red" type="submit">Register</Button>
           </form>
         </Grid.Column>
       </Grid>

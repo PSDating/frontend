@@ -15,8 +15,8 @@ const Intro = () => (
             <Header as="h3">Dating with your bank transactions</Header>
         </div>
         <div>
+            <Button className="fs-button basic login-button" color='red'>Login</Button>
             <Button as={Link} to="/register" className="register-button fs-button" color='red'>Register</Button>
-            <Button className="fs-button basic" color='red'>Login</Button>
         </div>
     </div>
 )

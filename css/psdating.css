@@ -55,7 +55,6 @@
 .intro-header {
     height: 518px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -68,12 +67,25 @@
     height: 100%;
 }
 
+.login-button {
+    margin-bottom: 20px !important;
+}
+
 .register-button {
     padding-top: 18px !important;
-    margin-bottom: 20px !important;
 }
 
 .logo-intro {
     width: 300px;
+    padding-top: 66px;
     padding-bottom: 10px;
+}
+
+.logo-register {
+    padding-top: 66px;
+    padding-bottom: 66px;
+}
+
+.button-register-register {
+    margin-top: 148px !important;
 }
