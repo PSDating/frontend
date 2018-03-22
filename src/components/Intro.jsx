@@ -7,12 +7,14 @@ import {
     Link
 } from "react-router-dom";
 import logoImage from "../../img/logo.png";
+import visual from "../../img/visual.jpg";
 
 const Intro = () => (
     <div className="intro-container">
         <div className="intro-header">
             <img className="logo-intro" src={logoImage} />
             <Header as="h3">Dating with your bank transactions</Header>
+            <img className="visual-intro" src={visual} />
         </div>
         <div>
             <Button className="fs-button basic login-button" color='red'>Login</Button>

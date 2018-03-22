@@ -75,7 +75,7 @@ h3 {
 }
 
 .intro-header {
-    height: 518px;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -102,6 +102,11 @@ h3 {
     width: 300px;
     padding-top: 66px;
     padding-bottom: 10px;
+}
+
+.visual-intro {
+    width: 500px;
+    margin-bottom: 50px;
 }
 
 .logo-register {
