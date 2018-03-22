@@ -108,3 +108,15 @@
 .bank-register-button {
     margin-top: 202px !important;
 }
+
+.shadow-rabobank-image {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 107px;
+    bottom: 92px;
+}
+
+.hidden {
+    display: none;
+}

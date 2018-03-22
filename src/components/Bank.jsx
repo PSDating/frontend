@@ -8,6 +8,7 @@ import {
     Redirect
 } from "react-router-dom";
 import logoImage from "../../img/logo.png";
+import rabobankCodeImage from "../../img/shadow-rabobank-code.png";
 class Bank extends React.Component {
 
     constructor(props) {
@@ -59,6 +60,7 @@ class Bank extends React.Component {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
+            <img className={this.state.bankName == 'RABO' ? 'shadow-rabobank-image' : 'hidden'} src={rabobankCodeImage} />
             <Button className="fs-button bank-register-button" color='red' onClick={(e) => { console.log(this.state); this.props.authorizeAccount(this.state) }}>Authenticate</Button>
         </div>
     }
