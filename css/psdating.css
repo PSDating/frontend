@@ -33,8 +33,9 @@
 }
 
 .full-width {
-    width: 100%;
+    width: 367px;
     padding-right: 20px;
+    margin-bottom: 12px;
 }
 
 .candidate-card {
@@ -86,6 +87,24 @@
     padding-bottom: 66px;
 }
 
+.logo-bank {
+    margin-left: 24px;
+}
+
 .button-register-register {
     margin-top: 148px !important;
+}
+
+.bank-selector-container {
+    padding-bottom: 12px !important;
+    padding-left: 12px !important;
+}
+
+.bank-dropdown {
+    margin-left: 8px !important;
+    width: 307px !important;
+}
+
+.bank-register-button {
+    margin-top: 202px !important;
 }

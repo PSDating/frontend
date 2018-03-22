@@ -60,7 +60,6 @@ class Registration extends React.Component {
     return (
       <Grid
         style={{ height: '100%' }}
-        verticalAlign='middle'
         textAlign='center'
       >
         <Grid.Column style={{ maxWidth: 650 }}>
