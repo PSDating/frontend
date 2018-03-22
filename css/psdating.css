@@ -6,7 +6,13 @@
     opacity: 1;
 }
 
+.remove-icon {
+    color: #6c020f;
+    padding-left: 20px;
+}
+
 .checkmark-icon {
+    color: green;
     float: right;
 }
 
@@ -17,4 +23,20 @@
 
 .full-width {
     width: 100%;
+    padding-right: 20px;
+}
+
+.candidate-column {
+    display: flex;
+    justify-content: center;
+}
+
+.candidate-image {
+    width: auto;
+    height: 300px;
+}
+
+.scanner-image {
+    width: 100px;
+    height: 100px;
 }

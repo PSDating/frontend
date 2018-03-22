@@ -4,12 +4,11 @@ import CandidateContainer from "../containers/CandidateContainer.js";
 import PreferencesContainer from "../containers/PreferencesContainer.js";
 
 const Selection = () => (
-  <Grid centered stackable columns={2}>
+  <Grid centered columns={2}>
     <Grid.Column>
-      <CandidateContainer />
-    </Grid.Column>
-    <Grid.Column>
-      <PreferencesContainer />
+      <div className="candidate-column">
+        <CandidateContainer />
+      </div>
     </Grid.Column>
   </Grid>
 )
