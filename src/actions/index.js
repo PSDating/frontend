@@ -24,3 +24,5 @@ export const updatePreference = data => Object.assign({}, {
 export const updateCandidate = data => Object.assign({}, {
   type: "UPDATE_CANDIDATE"
 }, data);
+
+export const 

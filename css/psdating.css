@@ -9,3 +9,12 @@
 .checkmark-icon {
     float: right;
 }
+
+.fs-button {
+    height: 50px;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}

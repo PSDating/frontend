@@ -10,7 +10,8 @@ class Registration extends React.Component {
     this.state = {
       company: "",
       username: "",
-      password: ""
+      password: "",
+      acceptedTermsOfAgreement: false
     };
 
     this.attemptLogin = props.attemptLogin;
@@ -18,6 +19,7 @@ class Registration extends React.Component {
     this.updateCompany = this.updateCompany.bind(this);
     this.updateUsername = this.updateUsername.bind(this);
     this.updatePassword = this.updatePassword.bind(this);
+    this.updateTermsOfAgreement = this.updateTermsOfAgreement.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -34,6 +36,10 @@ class Registration extends React.Component {
     this.setState({ password: event.target.value });
   }
 
+  updateTermsOfAgreement(event) {
+    this.setState({ acceptedTermsOfAgreement: event.target.checked })
+  }
+
   handleSubmit(event) {
     // Avoid reloading the page.
     event.preventDefault();
@@ -45,7 +51,7 @@ class Registration extends React.Component {
       return (
         <Redirect
           to={{
-            pathname: "/user"
+            pathname: "/bank"
           }}
         />
       );
@@ -72,7 +78,7 @@ class Registration extends React.Component {
             </div>
             <div className="field">
               <div className="ui checkbox">
-                <input type="checkbox" tabIndex="0" className="hidden" />
+                <input type="checkbox" value={this.state.acceptedTermsOfAgreement} onChange={this.updateTermsOfAgreement} tabIndex="0" />
                 <label>I agree to the Terms and Conditions</label>
               </div>
             </div>
