@@ -21,3 +21,8 @@
     display: flex;
     justify-content: center;
 }
+
+.candidate-image {
+    width: auto;
+    height: 300px;
+}
