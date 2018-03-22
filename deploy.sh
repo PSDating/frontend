@@ -1,1 +1,1 @@
-docker build -t psdating/frontend . && docker push psdating/frontend && kubectl delete deployment frontend-deployment && kubectl apply -f kubernetes/frontend-deployment.yaml
+npm run build && cp index.html ./dist/index.html && docker build -t psdating/frontend . && docker push psdating/frontend && kubectl delete deployment frontend-deployment && kubectl apply -f kubernetes/frontend-deployment.yaml
