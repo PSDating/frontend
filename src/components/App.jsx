@@ -23,14 +23,6 @@ const App = ({ store }) => (
   <Provider store={store}>
     <Router>
       <Container>
-        <Header as="h1">PSDating</Header>
-        <Menu>
-          <Menu.Item as={Link} to="/">Initial</Menu.Item>
-          <Menu.Item as={Link} to="/register">Register</Menu.Item>
-          <Menu.Item as={Link} to="/bank">Bank</Menu.Item>
-          <Menu.Item as={Link} to="/scanner">Scanner</Menu.Item>
-          <Menu.Item as={Link} to="/selection">Selection</Menu.Item>
-        </Menu>
         <Route exact path="/" component={IntroContainer} />
         <Route path="/register" component={RegistrationContainer} />
         <Route path="/bank" component={BankContainer} />
