@@ -1,9 +1,14 @@
 import React from "react";
 import { Container, Card, Icon, Image, Grid } from 'semantic-ui-react'
+import logoImage from "../../img/logo.png";
 
 const Candidate = ({ candidates, updateCandidate }) => {
   if (candidates.length === 0) {
-    return <Container>There are no more possible matches!</Container>;
+    return (
+      <div>
+          <img className="logo-intro logo-bank" src={logoImage} />
+      </div>
+    )
   }
 
   const candidate = candidates[0];
